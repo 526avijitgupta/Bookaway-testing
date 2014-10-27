@@ -26,9 +26,32 @@ class BookawaySellTest(unittest.TestCase):
         seller_names = open('input/seller_names.txt','r').readlines()
         seller_names = map(lambda each:each.strip('\n'),seller_names)
 
+        seller_emails = open('input/seller_emails.txt','r').readlines()
+        seller_emails = map(lambda each:each.strip('\n'),seller_emails)
+
+        seller_phones = open('input/seller_phones.txt','r').readlines()
+        seller_phones = map(lambda each:each.strip('\n'),seller_phones)
+
+        seller_passwords = open('input/seller_passwords.txt','r').readlines()
+        seller_passwords = map(lambda each:each.strip('\n'),seller_passwords)
+
+        seller_colleges = open('input/seller_colleges.txt','r').readlines()
+        seller_colleges = map(lambda each:each.strip('\n'),seller_colleges)
+
+        seller_categories = open('input/seller_categories.txt','r').readlines()
+        seller_categories = map(lambda each:each.strip('\n'),seller_categories)
+
+        seller_books = open('input/seller_books.txt','r').readlines()
+        seller_books = map(lambda each:each.strip('\n'),seller_books)
+
+
+
         #input_list = [
         #    'seller_name':seller_names
         #]
+
+        # InputList is a list , with each index containing a dictionary , each dictionary having same components as each other , seller_name etc.
+
         for name in seller_names:
             #my_dic.update({'seller_name':name}) # Which is better
             my_dic['seller_name']=name
