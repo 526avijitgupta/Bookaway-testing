@@ -3,10 +3,11 @@ import os
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
+from local_settings import *
+
 class BookawayBuyTest(unittest.TestCase):
 
     def setUp(self):
-        chromedriver = "/home/avijit/Downloads/chromedriver"
         os.environ["webdriver.chrome.driver"] = chromedriver
         self.driver = webdriver.Chrome(chromedriver)
 
