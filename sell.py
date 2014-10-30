@@ -46,19 +46,12 @@ class BookawaySellTest(unittest.TestCase):
         seller_books = map(lambda each:each.strip('\n'),seller_books)
 
 
-
-        #input_list = [
-        #    'seller_name':seller_names
-        #]
-
         # InputList is a list , with each index containing a dictionary , each dictionary having same components as each other , seller_name etc.
 
         for name in seller_names:
-            #my_dic.update({'seller_name':name}) # Which is better
             my_dic['seller_name']=name
             input_list.append({'seller_name':name})
-        # For input in input_list , input['seller_name']
-        # pdb.set_trace() 
+            
         for inp in input_list:
             name = driver.find_element_by_id("name")
             #name.send_keys("Avijit Gupta")
