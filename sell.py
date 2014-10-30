@@ -3,6 +3,7 @@ import unittest
 import os
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+from time import sleep
 
 from local_settings import *
 
@@ -96,6 +97,7 @@ class BookawaySellTest(unittest.TestCase):
             # submit.send_keys(Keys.RETURN)
 
             driver.refresh()
+            sleep(2)
 
     def tearDown(self):
         self.driver.close()
