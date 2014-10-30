@@ -1,4 +1,4 @@
-import pdb
+# import pdb
 import unittest
 import os
 from selenium import webdriver
@@ -57,7 +57,7 @@ class BookawaySellTest(unittest.TestCase):
             my_dic['seller_name']=name
             input_list.append({'seller_name':name})
         # For input in input_list , input['seller_name']
-        pdb.set_trace() 
+        # pdb.set_trace() 
         for inp in input_list:
             name = driver.find_element_by_id("name")
             #name.send_keys("Avijit Gupta")
