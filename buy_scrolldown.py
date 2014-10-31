@@ -18,24 +18,18 @@ class BookawayBuyTest(unittest.TestCase):
         self.assertIn("Buy", driver.title)
 
         driver.maximize_window()
+
         screen_height = int(driver.execute_script("return window.screen.height"))
-        current_scrollTop = int(driver.execute_script("return document.body.scrollHeight"))
-        page_height = int(driver.execute_script("return document.body.scrollHeight"))
-        new_scrollTop = 0
-        while (current_scrollTop - new_scrollTop > screen_height ):
-            new_scrollTop = current_scrollTop
-            # driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        current_scrollTop = 0
+        new_scrollTop = int(driver.execute_script("return document.body.scrollHeight"))
+
+        while (screen_height < new_scrollTop - current_scrollTop):
+            driver.execute_script("window.scrollTo(0,"+str(new_scrollTop)+");")
             sleep(2)
-            driver.execute_script("window.scrollTo(0, "+str(page_height)+");")
-            new_scrollTop = int(driver.execute_script("return document.body.scrollTop"))
-            page_height = int(driver.execute_script("return document.body.scrollHeight"))
-            print new_scrollTop,"new_scrollTop"
-            print page_height,"page_height"
-            print current_scrollTop,"current_scrollTop"
-            print screen_height,"screen_height"
-        
-
-
+            current_scrollTop = new_scrollTop
+            new_scrollTop = int(driver.execute_script("return document.body.scrollHeight"))
+        sleep(2)
+            
     def tearDown(self):
         self.driver.close()
 
