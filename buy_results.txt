@@ -1,0 +1,7 @@
+Testing 1:
+[Ran on 30 October 2014 , 6:40 PM]
+Almost overlapping of the last book's tile with the footer
+
+Testing 2:
+[Ran on 31 October 2014 , 7:00 PM]
+The last tile approximately fully overlapped with the last book's tile
