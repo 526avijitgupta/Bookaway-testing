@@ -5,7 +5,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from time import sleep
 
-from local_settings import *
+from locate_chromedriver import *
 
 
 class BookawaySellTest(unittest.TestCase):
